@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for Mommy Josah Mae S. Sabanal</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 18px;
+            background: #151b19;
+            font-family: 'Inter', sans-serif;
+            color: #f5f2e9;
+        }
+
+        /* Blackboard */
+        .blackboard {
+            position: relative;
+            width: 100%;
+            max-width: 950px;
+            min-height: 700px;
+            padding: 55px 35px;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.025), transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,.025), transparent 30%),
+                #24342e;
+            border: 12px solid #60482f;
+            border-radius: 8px;
+            box-shadow:
+                inset 0 0 35px rgba(0,0,0,.35),
+                0 25px 60px rgba(0,0,0,.45);
+            overflow: hidden;
+        }
+
+        /* Chalkboard texture */
+        .blackboard::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(255,255,255,.012) 4px
+                );
+        }
+
+        .board-content {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .small-heading {
+            color: #c7cfc9;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(35px, 6vw, 58px);
+            font-weight: 400;
+            color: #f5f2e9;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #d4ddd6;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 1px;
+            background: rgba(255,255,255,.35);
+            margin: 0 auto 35px;
+        }
+
+        /* Opening button */
+        .open-button {
+            background: transparent;
+            color: #f5f2e9;
+            border: 1px solid rgba(255,255,255,.55);
+            padding: 15px 32px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .35s ease;
+        }
+
+        .open-button:hover {
+            background: #f5f2e9;
+            color: #24342e;
+            transform: translateY(-2px);
+        }
+
+        /* Letter */
+        .letter {
+            display: none;
+            text-align: left;
+            margin-top: 15px;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .letter.show {
+            display: block;
+        }
+
+        .letter-inner {
+            padding: 35px 42px;
+            border: 1px solid rgba(255,255,255,.22);
+            background: rgba(255,255,255,.035);
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+
+        .greeting {
+            font-family: 'Great Vibes', cursive;
+            font-size: 42px;
+            color: #f7f3e8;
+            margin-bottom: 25px;
+        }
+
+        .message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 21px;
+            line-height: 1.85;
+            color: #f0f1e9;
+            font-weight: 400;
+        }
+
+        .message p {
+            margin-bottom: 22px;
+        }
+
+        .closing {
+            margin-top: 35px;
+            text-align: right;
+        }
+
+        .closing-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            color: #d8dfd9;
+            margin-bottom: 8px;
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 11px;
+            color: rgba(255,255,255,.5);
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .heart {
+            color: #e8d5c0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blackboard {
+                padding: 35px 18px;
+                border-width: 7px;
+            }
+
+            .letter-inner {
+                padding: 25px 20px;
+            }
+
+            .message {
+                font-size: 19px;
+                line-height: 1.75;
+            }
+
+            .greeting {
+                font-size: 35px;
+            }
+
+            .title {
+                font-size: 39px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="blackboard">
+
+        <div class="board-content">
+
+            <p class="small-heading">A Personal Note</p>
+
+            <h1 class="title">For Mommy Josah Mae S. Sabanal</h1>
+
+            <p class="subtitle">
+                A little message from the heart
+            </p>
+
+            <div class="divider"></div>
+
+            <button class="open-button" id="openButton">
+                Read My Letter
+            </button>
+
+            <article class="letter" id="letter">
+
+                <div class="letter-inner">
+
+                    <h2 class="greeting">Hello, Mommy.</h2>
+
+                    <div class="message">
+
+                        <p>
+                            Hello Mommy, I just wanna thank you for the things
+                            you have done for me during the days of your visit
+                            here in the Philippines.
+                        </p>
+
+                        <p>
+                            To be honest, sa imoha rajud ko for the very first
+                            time nga naay tao na proud sa ako. Maong grabe
+                            akong pasalamat nimo. Salamat kay sa more or less
+                            four days ta nag-uban, gipafeel nimo nga
+                            pinangga ko nimo as a mother, tita, and ate —
+                            something nga murag sauna, ginaseek ra nako sa
+                            uban.
+                        </p>
+
+                        <p>
+                            Genuine kayka na tao, Mommy, and gapasalamat
+                            jud ko nga naa koy Mommy Sami nga pareho nimo.
+                            Salamat sa advice, sa imong words of wisdom,
+                            sa imong pag-protect, ug sa tanan-tanan, Mommy.
+                            No words can explain what I felt during the
+                            times nga nag-uban ta.
+                        </p>
+
+                        <p>
+                            Wa jud ko gikapoy, kay kabalo ka nga ikaw jud
+                            ang tao nga mutabang sa ako nga walay
+                            consequences. Maong thank you kaayo.
+                        </p>
+
+                        <p>
+                            Amping sa byahe nimo, Mommy. Ingat ka always.
+                            I love you, my ate, tita, and mommy. Know that
+                            I will always be here if naa kay mga iingon or
+                            naa kay ipabuhat.
+                        </p>
+
+                        <p>
+                            Praying nga puhon mudato ta, hehe.
+                            God bless and good luck sa atong plans in life!
+                            Safe flights, Mommy!
+                        </p>
+
+                    </div>
+
+                    <div class="closing">
+
+                        <p class="closing-text">
+                            With love and gratitude,
+                        </p>
+
+                        <p class="signature">
+                            Von Esson A. Vergara
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+         
+        </div>
+
+    </main>
+
+    <script>
+        const openButton = document.getElementById("openButton");
+        const letter = document.getElementById("letter");
+
+        openButton.addEventListener("click", function () {
+            letter.classList.add("show");
+
+            openButton.style.display = "none";
+
+            // Smoothly move to the letter on mobile
+            setTimeout(() => {
+                letter.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 100);
+        });
+    </script>
+
+</body>
+</html>
